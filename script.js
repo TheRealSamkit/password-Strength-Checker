@@ -36,7 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
   cpyBtn.addEventListener("click", copyText);
 });
 function copyText() {
-  const password = passwordinp.value;
+  let password = passwordinp.value;
+  password = password.replace(/ /g, "");
+  passwordinp.value = password;
+
   navigator.clipboard.writeText(password).then(() => {
     cpyTxt.innerHTML = "Password Copied!";
     this.querySelector("i").classList.toggle("fa-check");
@@ -49,7 +52,10 @@ function copyText() {
   });
 }
 function checkStrength() {
-  const password = passwordinp.value;
+  let password = passwordinp.value;
+  password = password.replace(/ /g, "");
+  passwordinp.value = password;
+
   if (password.length >= 8) {
     lengthIndi.innerHTML = right;
   } else {
@@ -86,7 +92,10 @@ function togglePasswordVisibility() {
   this.querySelector("i").classList.toggle("fa-eye-slash");
 }
 function updateStrengthMeter() {
-  const password = passwordinp.value;
+  let password = passwordinp.value;
+  password = password.replace(/ /g, "");
+  passwordinp.value = password;
+
   let strength = 0;
 
   if (password.length >= 8) strength++;
