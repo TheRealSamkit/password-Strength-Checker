@@ -16,7 +16,8 @@ body {
 
 .container {
   flex-direction: column;
-  width: 60%;
+  min-width: 60%;
+  max-width: 90vw;
   box-shadow: 0 0 5px #000000a4;
   border-radius: 8px;
 }
@@ -54,7 +55,7 @@ h2 {
 
 .eye {
   all: unset;
-  width: 40px;
+  width: 10%;
   height: 100%;
   background-color: #343434;
   color: #fff;
@@ -73,6 +74,7 @@ input {
   padding: 8px;
   font-size: 1rem;
   color: #333;
+  width: 90%;
 }
 
 .form-group:focus-within {
@@ -90,7 +92,7 @@ ul li {
   display: flex;
   margin: 4px 0;
   margin-left: 10px;
-  font-size: 1rem;
+  font-size: 0.9em;
 }
 
 .strength {
@@ -131,7 +133,7 @@ progress::-webkit-progress-bar {
 }
 
 .txt {
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
